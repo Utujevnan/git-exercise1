@@ -484,3 +484,37 @@ Fast-forward
  services.html | 9 ++++-----
  1 file changed, 4 insertions(+), 5 deletions(-)
  '''bash
+ ### EXERCISE2
+'''bash
+ymiribaii@Iribas-iMac-2 git-exercise1 % git checkout -b ft/service-redesig 
+Switched to a new branch 'ft/service-redesig'
+gymiribaii@Iribas-iMac-2 git-exercise1 % git add --all
+gymiribaii@Iribas-iMac-2 git-exercise1 % git commit -m "added a service list"
+[ft/service-redesig 5498adc] added a service list
+ 2 files changed, 7 insertions(+), 1 deletion(-)
+ create mode 100644 .DS_Store
+gymiribaii@Iribas-iMac-2 git-exercise1 % git push
+fatal: The current branch ft/service-redesig has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/service-redesig
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+gymiribaii@Iribas-iMac-2 git-exercise1 % git push --set-upstream origin ft/service-redesig
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 737 bytes | 737.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/service-redesig' on GitHub by visiting:
+remote:      https://github.com/Utujevnan/git-exercise1/pull/new/ft/service-redesig
+remote: 
+To https://github.com/Utujevnan/git-exercise1.git
+ * [new branch]      ft/service-redesig -> ft/service-redesig
+branch 'ft/service-redesig' set up to track 'origin/ft/service-redesig'.
+'''

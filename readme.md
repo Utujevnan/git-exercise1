@@ -312,4 +312,175 @@ gymiribaii@Iribas-iMac-2 git-exercise1 % git push
 Everything up-to-date
 gymiribaii@Iribas-iMac-2 git-exercise1 % 
 '''
+## BUNDLE 2
+### EXERCISE1
+'''bash
+gymiribaii@Iribas-iMac-2 git-exercise1 % git branch ft/bundle-2
+gymiribaii@Iribas-iMac-2 git-exercise1 % git add services.html
+fatal: pathspec 'services.html' did not match any files
+gymiribaii@Iribas-iMac-2 git-exercise1 % git status
+On branch main
+Your branch is up to date with 'origin/main'.
 
+nothing to commit, working tree clean
+gymiribaii@Iribas-iMac-2 git-exercise1 % git switch ft/bundle-2
+Switched to branch 'ft/bundle-2'
+gymiribaii@Iribas-iMac-2 git-exercise1 % git status
+On branch ft/bundle-2
+nothing to commit, working tree clean
+gymiribaii@Iribas-iMac-2 git-exercise1 % git stash list
+gymiribaii@Iribas-iMac-2 git-exercise1 % git status
+On branch ft/bundle-2
+nothing to commit, working tree clean
+gymiribaii@Iribas-iMac-2 git-exercise1 % git checkout test
+Switched to branch 'test'
+Your branch is up to date with 'origin/test'.
+gymiribaii@Iribas-iMac-2 git-exercise1 % git status
+On branch test
+Your branch is up to date with 'origin/test'.
+
+nothing to commit, working tree clean
+gymiribaii@Iribas-iMac-2 git-exercise1 % git restore home.html
+gymiribaii@Iribas-iMac-2 git-exercise1 % git commit -m "restored a page"
+On branch test
+Your branch is up to date with 'origin/test'.
+
+nothing to commit, working tree clean
+gymiribaii@Iribas-iMac-2 git-exercise1 % git push
+Everything up-to-date
+gymiribaii@Iribas-iMac-2 git-exercise1 % git restore services.html
+error: pathspec 'services.html' did not match any file(s) known to git
+gymiribaii@Iribas-iMac-2 git-exercise1 % git checkout !DOCTYPE html>
+<html>
+    <head>
+        <title>Git Exercise | services</title>
+    </head>
+    <body>
+        <h1>These are our services</h1>
+    </body>
+</html>
+zsh: event not found: DOCTYPE
+gymiribaii@Iribas-iMac-2 git-exercise1 % git checkout html>
+<html>
+    <head>
+        <title>Git Exercise | services</title>
+    </head>
+    <body>
+        <h1>These are our services</h1>
+    </body>
+</html>
+zsh: parse error near `\n'
+gymiribaii@Iribas-iMac-2 git-exercise1 % git checkout ft/bundle-2 
+Switched to branch 'ft/bundle-2'
+gymiribaii@Iribas-iMac-2 git-exercise1 % git restore services.html
+error: pathspec 'services.html' did not match any file(s) known to git
+gymiribaii@Iribas-iMac-2 git-exercise1 % git branch --contains services.html
+error: malformed object name services.html
+gymiribaii@Iribas-iMac-2 git-exercise1 % git log --all -- git-exercise1/services.html
+gymiribaii@Iribas-iMac-2 git-exercise1 % git ls-files | grep git-exercise1/services.html
+
+gymiribaii@Iribas-iMac-2 git-exercise1 % git status
+On branch ft/bundle-2
+nothing to commit, working tree clean
+gymiribaii@Iribas-iMac-2 git-exercise1 % git checkout test
+Switched to branch 'test'
+Your branch is up to date with 'origin/test'.
+gymiribaii@Iribas-iMac-2 git-exercise1 % git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+gymiribaii@Iribas-iMac-2 git-exercise1 % git checkout dev
+branch 'dev' set up to track 'origin/dev'.
+Switched to a new branch 'dev'
+gymiribaii@Iribas-iMac-2 git-exercise1 % git checkout ft/bundle-2
+Switched to branch 'ft/bundle-2'
+gymiribaii@Iribas-iMac-2 git-exercise1 % git add services.html
+gymiribaii@Iribas-iMac-2 git-exercise1 % git commit -m "created a page"
+[ft/bundle-2 4cfdadf] created a page
+ 1 file changed, 9 insertions(+)
+ create mode 100644 services.html
+gymiribaii@Iribas-iMac-2 git-exercise1 % git push origin ft/bundle-2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 397 bytes | 397.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/Utujevnan/git-exercise1/pull/new/ft/bundle-2
+remote: 
+To https://github.com/Utujevnan/git-exercise1.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+gymiribaii@Iribas-iMac-2 git-exercise1 % git fetch origin main
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 6 (delta 1), reused 3 (delta 1), pack-reused 0 (from 0)
+Unpacking objects: 100% (6/6), 2.92 KiB | 597.00 KiB/s, done.
+From https://github.com/Utujevnan/git-exercise1
+ * branch            main       -> FETCH_HEAD
+   780b8a0..e53f0a0  main       -> origin/main
+gymiribaii@Iribas-iMac-2 git-exercise1 % git merge main
+Already up to date.
+gymiribaii@Iribas-iMac-2 git-exercise1 % git add .
+git commit -m "Resolve merge conflicts"
+git push origin ft/bundle-2
+
+On branch ft/bundle-2
+nothing to commit, working tree clean
+Everything up-to-date
+gymiribaii@Iribas-iMac-2 git-exercise1 % git push origin ft/bundle-2
+Everything up-to-date
+gymiribaii@Iribas-iMac-2 git-exercise1 % git status
+On branch ft/bundle-2
+nothing to commit, working tree clean
+gymiribaii@Iribas-iMac-2 git-exercise1 % git checkout ft/bundle-2
+Already on 'ft/bundle-2'
+gymiribaii@Iribas-iMac-2 git-exercise1 % git add .
+gymiribaii@Iribas-iMac-2 git-exercise1 % git commit -m "Add or fix changes for services.html"
+On branch ft/bundle-2
+nothing to commit, working tree clean
+gymiribaii@Iribas-iMac-2 git-exercise1 % git add .                                           
+gymiribaii@Iribas-iMac-2 git-exercise1 % git commit -m "Add or fix changes for services.html"
+On branch ft/bundle-2
+nothing to commit, working tree clean
+gymiribaii@Iribas-iMac-2 git-exercise1 % git push origin ft/bundle-2
+
+Everything up-to-date
+gymiribaii@Iribas-iMac-2 git-exercise1 % git merge main
+
+Already up to date.
+gymiribaii@Iribas-iMac-2 git-exercise1 % git checkout main
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 7 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+gymiribaii@Iribas-iMac-2 git-exercise1 % git pull
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 967 bytes | 161.00 KiB/s, done.
+From https://github.com/Utujevnan/git-exercise1
+   4cfdadf..8a01c6a  ft/bundle-2 -> origin/ft/bundle-2
+Updating 780b8a0..e53f0a0
+Fast-forward
+ about.html    |   9 +++
+ home.html     |   9 +++
+ readme.md     | 316 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ services.html |   9 +++
+ 4 files changed, 341 insertions(+), 2 deletions(-)
+ create mode 100644 about.html
+ create mode 100644 home.html
+ create mode 100644 services.html
+gymiribaii@Iribas-iMac-2 git-exercise1 % git pull
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 888 bytes | 888.00 KiB/s, done.
+From https://github.com/Utujevnan/git-exercise1
+   e53f0a0..aaf4e70  main       -> origin/main
+Updating e53f0a0..aaf4e70
+Fast-forward
+ services.html | 9 ++++-----
+ 1 file changed, 4 insertions(+), 5 deletions(-)
+ '''bash

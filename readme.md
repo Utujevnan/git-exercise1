@@ -502,19 +502,231 @@ To push the current branch and set the remote as upstream, use
 To have this happen automatically for branches without a tracking
 upstream, see 'push.autoSetupRemote' in 'git help config'.
 
-gymiribaii@Iribas-iMac-2 git-exercise1 % git push --set-upstream origin ft/service-redesig
-Enumerating objects: 6, done.
-Counting objects: 100% (6/6), done.
-Delta compression using up to 8 threads
-Compressing objects: 100% (4/4), done.
-Writing objects: 100% (4/4), 737 bytes | 737.00 KiB/s, done.
-Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (1/1), completed with 1 local object.
-remote: 
-remote: Create a pull request for 'ft/service-redesig' on GitHub by visiting:
-remote:      https://github.com/Utujevnan/git-exercise1/pull/new/ft/service-redesig
-remote: 
-To https://github.com/Utujevnan/git-exercise1.git
- * [new branch]      ft/service-redesig -> ft/service-redesig
-branch 'ft/service-redesig' set up to track 'origin/ft/service-redesig'.
-'''
+PS C:\Users\User\git-exercise1> git branch contains services.html
+fatal: not a valid object name: 'services.html'
+Switched to branch 'ft/bundle-2'
+Your branch is up to date with 'origin/ft/bundle-2'.
+PS C:\Users\User\git-exercise1> git checkout main
+Your branch is behind 'origin/main' by 16 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+PS C:\Users\User\git-exercise1> git checkout ft/service-redesig
+Switched to branch 'ft/service-redesig'
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 16 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+error: The following untracked working tree files would be overwritten by checkout:
+        services.html
+Please move or remove them before you switch branches.
+Aborting
+PS C:\Users\User\git-exercise1> git add services.html
+PS C:\Users\User\git-exercise1> git commit -m "edited a service page in the main branch"
+[main 49489d2] edited a service page in the main branch
+ 1 file changed, 14 insertions(+)
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\User\git-exercise1>
+PS C:\Users\User\git-exercise1>
+PS C:\Users\User\git-exercise1>
+PS C:\Users\User\git-exercise1>
+PS C:\Users\User\git-exercise1> git push origin
+error: failed to push some refs to 'https://github.com/utujevnan/git-exercise1'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\User\git-exercise1> git checkout ft/service-redesig
+Switched to branch 'ft/service-redesig'
+Your branch is up to date with 'origin/ft/service-redesig'.
+PS C:\Users\User\git-exercise1> git add services.html
+PS C:\Users\User\git-exercise1> git commit -m "edited a service page in the main branch"
+[ft/service-redesig f12f2d6] edited a service page in the main branch
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\User\git-exercise1> git push origin
+Enumerating objects: 5, done.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 303 bytes | 60.00 KiB/s, done.
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Utujevnan/git-exercise1.git
+To https://github.com/utujevnan/git-exercise1
+   e47006b..f12f2d6  ft/service-redesig -> ft/service-redesig
+PS C:\Users\User\git-exercise1> git add services.html
+PS C:\Users\User\git-exercise1> git commit -m "edited a service page in the main branch"
+[ft/service-redesig 311c58b] edited a service page in the main branch
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\User\git-exercise1> git push origin
+Enumerating objects: 5, done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 306 bytes | 306.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Utujevnan/git-exercise1.git
+   f12f2d6..311c58b  ft/service-redesig -> ft/service-redesig
+Switched to branch 'main'
+Your branch and 'origin/main' have diverged,
+PS C:\Users\User\git-exercise1> git checkout ft/service-redesig
+Switched to branch 'ft/service-redesig'
+Your branch is up to date with 'origin/ft/service-redesig'.
+PS C:\Users\User\git-exercise1> git merge
+Already up to date.
+PS C:\Users\User\git-exercise1> git checkout ft/service-redesig
+Already on 'ft/service-redesig'
+Your branch is up to date with 'origin/ft/service-redesig'.
+PS C:\Users\User\git-exercise1> git diff
+PS C:\Users\User\git-exercise1> git diff main
+diff --git a/.DS_Store b/.DS_Store
+diff --git a/.DS_Store b/.DS_Store
+index 0000000..eeea75b
+Binary files /dev/null and b/.DS_Store differ
+diff --git a/about.html b/about.html
+new file mode 100644
+index 0000000..206793e
+--- /dev/null
++++ b/about.html
+@@ -0,0 +1,9 @@
+PS C:\Users\User\git-exercise1> git diff main services.html
+>>
+diff --git a/services.html b/services.html
+index 604848f..b6d36b4 100644
+--- a/services.html
+diff --git a/services.html b/services.html
+index 604848f..b6d36b4 100644
+--- a/services.html
++++ b/services.html
+@@ -5,7 +5,7 @@
+         <title>Git Exercise | Services</title>
+     </head>
+     <body>
+-        <h1>these are  our services</h1>   
++        <h1>here are  our services</h1>   
+PS C:\Users\User\git-exercise1> git add services.html   
+PS C:\Users\User\git-exercise1> git commit -m "solved a conflict"                       
+[ft/service-redesig 5124575] solved a conflict
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\User\git-exercise1> git push origin  
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 292 bytes | 146.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Utujevnan/git-exercise1.git
+To https://github.com/utujevnan/git-exercise1
+PS C:\Users\User\git-exercise1> git checkout main
+Switched to branch 'main'
+Your branch and 'origin/main' have diverged,
+and have 1 and 16 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+PS C:\Users\User\git-exercise1> git checkout ft/service-redesig
+Switched to branch 'ft/service-redesig'
+Your branch is up to date with 'origin/ft/service-redesig'.
+PS C:\Users\User\git-exercise1> git diff main services.html
+  (use "git pull" if you want to integrate the remote branch with yours)
+PS C:\Users\User\git-exercise1> git checkout ft/service-redesig
+Switched to branch 'ft/service-redesig'
+Your branch is up to date with 'origin/ft/service-redesig'.
+  (use "git pull" if you want to integrate the remote branch with yours)
+PS C:\Users\User\git-exercise1> git checkout ft/service-redesig
+Switched to branch 'ft/service-redesig'
+  (use "git pull" if you want to integrate the remote branch with yours)
+PS C:\Users\User\git-exercise1> git checkout ft/service-redesig
+  (use "git pull" if you want to integrate the remote branch with yours)
+  (use "git pull" if you want to integrate the remote branch with yours)
+PS C:\Users\User\git-exercise1> git checkout ft/service-redesig
+Switched to branch 'ft/service-redesig'
+  (use "git pull" if you want to integrate the remote branch with yours)
+PS C:\Users\User\git-exercise1> git checkout ft/service-redesig
+Switched to branch 'ft/service-redesig'
+  (use "git pull" if you want to integrate the remote branch with yours)
+PS C:\Users\User\git-exercise1> git checkout ft/service-redesig
+  (use "git pull" if you want to integrate the remote branch with yours)
+  (use "git pull" if you want to integrate the remote branch with yours)
+PS C:\Users\User\git-exercise1> git checkout ft/service-redesig
+Switched to branch 'ft/service-redesig'
+PS C:\Users\User\git-exercise1> git diff main services.html
+>>
+Already up to date.
+PS C:\Users\User\git-exercise1> ^C
+PS C:\Users\User\git-exercise1> https://github.com/Utujevnan/git-exercise1/pull/6/#issue-2751775806^C
+PS C:\Users\User\git-exercise1> ^C
+PS C:\Users\User\git-exercise1> P^C
+PS C:\Users\User\git-exercise1> git add readme.md
+PS C:\Users\User\git-exercise1> git commit -m "added exercise2 bundle 2 description"
+[ft/service-redesig af5aeaf] added exercise2 bundle 2 description
+PS C:\Users\User\git-exercise1> git push origin
+To https://github.com/utujevnan/git-exercise1
+ ! [rejected]        ft/service-redesig -> ft/service-redesig (fetch first)
+error: failed to push some refs to 'https://github.com/utujevnan/git-exercise1'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\User\git-exercise1> git push
+To https://github.com/utujevnan/git-exercise1
+ ! [rejected]        ft/service-redesig -> ft/service-redesig (fetch first)
+error: failed to push some refs to 'https://github.com/utujevnan/git-exercise1'
+hint: Updates were rejected because the remote contains work that you do not
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+fatal: invalid gitfile format: readme.md
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+PS C:\Users\User\git-exercise1> git checkout dev
+Switched to branch 'dev'
+Your branch is ahead of 'origin/dev' by 16 commits.
+PS C:\Users\User\git-exercise1> git pull origin
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 976 bytes | 31.00 KiB/s, done.
+From https://github.com/utujevnan/git-exercise1
+   5124575..cda73f6  ft/service-redesig -> origin/ft/service-redesig
+Already up to date.
+Unpacking objects: 100% (3/3), 976 bytes | 31.00 KiB/s, done.
+From https://github.com/utujevnan/git-exercise1
+   5124575..cda73f6  ft/service-redesig -> origin/ft/service-redesig
+Already up to date.
+PS C:\Users\User\git-exercise1> git push origin
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Utujevnan/git-exercise1.git
+To https://github.com/utujevnan/git-exercise1
+   780b8a0..f628b22  dev -> dev
+PS C:\Users\User\git-exercise1> git ^C
+PS C:\Users\User\git-exercise1>
+
+
+
+
+
+Unpacking objects: 100% (3/3), 976 bytes | 31.00 KiB/s, done.
+From https://github.com/utujevnan/git-exercise1
+   5124575..cda73f6  ft/service-redesig -> origin/ft/service-redesig
+Already up to date.
+PS C:\Users\User\git-exercise1> git push origin
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: This repository moved. Please use the new location:
+From https://github.com/utujevnan/git-exercise1
+   5124575..cda73f6  ft/service-redesig -> origin/ft/service-redesig
+Already up to date.
+PS C:\Users\User\git-exercise1> git push origin
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Utujevnan/git-exercise1.git
+To https://github.com/utujevnan/git-exercise1
+   780b8a0..f628b22  dev -> dev
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Utujevnan/git-exercise1.git
+To https://github.com/utujevnan/git-exercise1
+   780b8a0..f628b22  dev -> dev
+   780b8a0..f628b22  dev -> dev
+   '''

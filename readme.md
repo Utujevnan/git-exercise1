@@ -518,3 +518,162 @@ To https://github.com/Utujevnan/git-exercise1.git
  * [new branch]      ft/service-redesig -> ft/service-redesig
 branch 'ft/service-redesig' set up to track 'origin/ft/service-redesig'.
 '''
+##BUNDLE 4
+### EXERCISE 2
+'''bash
+S C:\Users\User\git-exercise1> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\User\git-exercise1> git checkout main
+M       README.md
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\User\git-exercise1> git checkout ft/footer
+PS C:\Users\User\git-exercise1> git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+PS C:\Users\User\git-exercise1> git add about.html
+PS C:\Users\User\git-exercise1> git commit -m "ft: added changes to about page"
+[ft/footer 0aa4541] ft: added changes to about page
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\User\git-exercise1> git push
+fatal: The current branch ft/footer has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/footer
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\User\git-exercise1> ^C
+PS C:\Users\User\git-exercise1> git push --set-upstream origin ft/footer     
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 303 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.        
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Utujevnan/git-exercise1.git
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/Utujevnan/git-exercise1/pull/new/ft/footer   
+remote:
+To https://github.com/utujevnan/git-exercise1
+ * [new branch]      ft/footer -> ft/footer
+PS C:\Users\User\git-exercise1> git add home.html
+PS C:\Users\User\git-exercise1> git commit -m "ft: added changes to home page" 
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 334 bytes | 334.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.        
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Utujevnan/git-exercise1.git
+To https://github.com/utujevnan/git-exercise1
+   0aa4541..73ac549  ft/footer -> ft/footer
+PS C:\Users\User\git-exercise1> git checkout main
+M       README.md
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\User\git-exercise1> git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+PS C:\Users\User\git-exercise1> git merge --sqaush ft/footer
+error: unknown option `sqaush'
+usage: git merge [<options>] [<commit>...]
+   or: git merge --abort
+   or: git merge --continue
+
+    -n                    do not show a diffstat at the end of the merge     
+    --[no-]stat           show a diffstat at the end of the merge
+    --[no-]summary        (synonym to --stat)
+    --[no-]log[=<n>]      add (at most <n>) entries from shortlog to merge commit message
+    --[no-]squash         create a single commit instead of doing a merge    
+    --[no-]commit         perform a commit if the merge succeeds (default)   
+    -e, --[no-]edit       edit message before committing
+    --[no-]cleanup <mode> how to strip spaces and #comments from message     
+    --[no-]ff             allow fast-forward (default)
+    --ff-only             abort if fast-forward is not possible
+    --[no-]rerere-autoupdate
+                          update the index with reused conflict resolution if possible
+    --[no-]verify-signatures
+                          verify that the named commit has a valid GPG signature
+    -s, --[no-]strategy <strategy>
+                          merge strategy to use
+    -X, --[no-]strategy-option <option=value>
+                          option for selected merge strategy
+    -m, --[no-]message <message>
+                          merge commit message (for a non-fast-forward merge)    -F, --file <path>     read message from file
+    --[no-]into-name <name>
+    -v, --[no-]verbose    be more verbose
+    -q, --[no-]quiet      be more quiet
+    --[no-]abort          abort the current in-progress merge
+    --[no-]quit           --abort but leave index and working tree alone     
+    --[no-]continue       continue the current in-progress merge
+    --[no-]allow-unrelated-histories
+                          allow merging unrelated histories
+    --[no-]progress       force progress reporting
+    -S, --[no-]gpg-sign[=<key-id>]
+                          GPG sign commit
+    --[no-]autostash      automatically stash/stash pop before and after     
+    --[no-]overwrite-ignore
+                          update ignored files (default)
+    --[no-]signoff        add a Signed-off-by trailer
+    --no-verify           bypass pre-merge-commit and commit-msg hooks       
+    --verify              opposite of --no-verify
+
+PS C:\Users\User\git-exercise1> git log
+/main, origin/HEAD, git-copy/main, main)
+Author: Vanessa Utuje <utujevan@gmail.com>
+Date:   Fri Dec 20 13:46:21 2024 +0200
+
+    ft: updated home page
+
+commit b90b0c60fc7c44abbb0cd05e180b81b9573cdfe2
+Date:   Fri Dec 20 13:23:28 2024 +0200
+
+    restored readme.md
+
+commit 6b3a6784ca952829885e79727d14f1172a0f7936
+Author: Vanessa Utuje <utujevan@gmail.com>
+Date:   Fri Dec 20 12:07:37 2024 +0200
+
+PS C:\Users\User\git-exercise1> git commit -m "footer changes squashing"     
+On branch ft/squashing
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)      
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\User\git-exercise1> git push
+fatal: The current branch ft/squashing has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/squashing
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\User\git-exercise1> git push --set-upstream origin ft/squashing  
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Utujevnan/git-exercise1.git
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:      
+remote:      https://github.com/Utujevnan/git-exercise1/pull/new/ft/squashin 
+remote:
+To https://github.com/utujevnan/git-exercise1
+ * [new branch]      ft/squashing -> ft/squashing
+branch 'ft/squashing' set up to track 'origin/ft/squashing'.
+PS C:\Users\User\git-exercise1> 
+'''

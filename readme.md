@@ -518,3 +518,19 @@ To https://github.com/Utujevnan/git-exercise1.git
  * [new branch]      ft/service-redesig -> ft/service-redesig
 branch 'ft/service-redesig' set up to track 'origin/ft/service-redesig'.
 '''
+## BUNDLE5
+### EXERCISE 1GitHub Pages Setup Guide
+'''bash
+This repository is configured to use GitHub Pages. Follow the steps below to enable and test the GitHub Pages setup.
+
+## Enabling GitHub Pages
+1. Go to the **Settings** tab of this repository.
+2. Scroll to the **Pages** section (under "Code and Automation").
+3. In the **Source** dropdown:
+   - Select the branch you want to use (e.g., `main`).
+   - Choose the folder (e.g., `/root`) as the source for GitHub Pages.
+4. Click **Save**.
+
+## Accessing the GitHub Pages Site
+- Once enabled, GitHub will generate a link for your site:
+'''

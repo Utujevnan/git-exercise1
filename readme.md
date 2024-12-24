@@ -663,3 +663,33 @@ To https://github.com/Utujevnan/git-cafe-exercise
 branch 'bugfix/change-index4-title' set up to track 'origin/bugfix/change-index4-title'.
 PS C:\Users\User\git-cafe-exercise> 
 '''
+### Exercise 3
+'''bash
+PS C:\Users\User\git-cafe-exercise> git checkout -b hotfix/contact-telephone
+>>
+Switched to a new branch 'hotfix/contact-telephone'
+PS C:\Users\User\git-cafe-exercise> git add index-4.html
+PS C:\Users\User\git-cafe-exercise> git commit -m "changed phone number tp an index-4 page"  
+[hotfix/contact-telephone 77edc78] changed phone number tp an index-4 page
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\User\git-cafe-exercise> git push
+fatal: The current branch hotfix/contact-telephone has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin hotfix/contact-telephone
+
+Counting objects: 100% (5/5), done.                           ing
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 316 bytes | 105.00 KiB/s, done.  igin hotfix/contact-telephone
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0) 
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'hotfix/contact-telephone' on GitHub by visiting:
+remote:      https://github.com/Utujevnan/git-cafe-exercise/pubjects.ll/new/hotfix/contact-telephone
+remote:                                                       n GitHub by visiting:
+To https://github.com/Utujevnan/git-cafe-exercise             ll/new/hotfix/contact-telephone
+ * [new branch]      hotfix/contact-telephone -> hotfix/contact-telephone
+branch 'hotfix/contact-telephone' set up to track 'origin/hotft-telephoneix/contact-telephone'.                                        ix/contact-telephone'.
+PS C:\Users\User\git-cafe-exercise>
+'''

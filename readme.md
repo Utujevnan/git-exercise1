@@ -554,3 +554,51 @@ To https://github.com/Utujevnan/git-cafe-exercise             an/git-cafe-exerci
 PS C:\Users\User\git-cafe-exercise> https://github.com/Utujevnan/git-cafe-exercisehttps://github.c
 PS C:\Users\User\git-cafe-exercise>
 '''
+## BUNDLE 6
+### EXERCISE 1
+'''bash
+PS C:\Users\User\git-cafe-exercise> git init
+Reinitialized existing Git repository in C:/Users/User/git-cafPS C:\Users\User\git-cafe-exercise> git add index.html        
+PS C:\Users\User\git-cafe-exercise> git checkout -b ft/menu-pagege
+Switched to a new branch 'ft/menu-page'
+PS C:\Users\User\git-cafe-exercise> gut add menu.html
+cmdlet, function, script file, or operable program. Check     
+the spelling of the name, or if a path was included, verify   
+that the path is correct and try again.
+At line:1 char:1
++ gut add menu.html
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (gut:String) [  
+   ], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException        
+ 
+PS C:\Users\User\git-cafe-exercise> git commit -m "created a menu page to the feature branch"
+[ft/menu-page 8adb3df] created a menu page to the feature branch
+ 1 file changed, 81 insertions(+)
+ create mode 100644 menu.html
+PS C:\Users\User\git-cafe-exercise> git push
+fatal: The current branch ft/menu-page has no upstream branch.To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/menu-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.    
+
+PS C:\Users\User\git-cafe-exercise> git push --set-upstream origin ft/menu-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1017 bytes | 53.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0) 
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/menu-page' on GitHub by 
+visiting:
+remote:      https://github.com/Utujevnan/git-cafe-exercise/pull/new/ft/menu-page
+remote:
+To https://github.com/Utujevnan/git-cafe-exercise
+ * [new branch]      ft/menu-page -> ft/menu-page
+branch 'ft/menu-page' set up to track 'origin/ft/menu-page'.
+PS C:\Users\User\git-cafe-exercise> 
+'''

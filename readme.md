@@ -519,7 +519,7 @@ To https://github.com/Utujevnan/git-exercise1.git
 branch 'ft/service-redesig' set up to track 'origin/ft/service-redesig'.
 '''
 ## BUNDLE5
-### EXERCISE 1GitHub Pages Setup Guide
+### EXERCISE 1 GitHub Pages Setup Guide
 '''bash
 This repository is configured to use GitHub Pages. Follow the steps below to enable and test the GitHub Pages setup.
 
@@ -533,4 +533,24 @@ This repository is configured to use GitHub Pages. Follow the steps below to ena
 
 ## Accessing the GitHub Pages Site
 - Once enabled, GitHub will generate a link for your site:
+'''
+### EXERCISE 2
+'''bash
+PS C:\Users\User\git-cafe-exercise> git init
+Reinitialized existing Git repository in C:/Users/User/git-cafPS C:\Users\User\git-cafe-exercise> git add index.html        
+PS C:\Users\User\git-cafe-exercise> git commit -m "changed a domain title"omain title"
+[main b4dbacb] changed a domain title
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\User\git-cafe-exercise> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 320 bytes | 106.00 KiB/s, done.  
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0) bjects.
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Utujevnan/git-cafe-exercise             an/git-cafe-exercisehttps://github.c
+   d1d3f9c..b4dbacb  main -> main
+PS C:\Users\User\git-cafe-exercise> https://github.com/Utujevnan/git-cafe-exercisehttps://github.c
+PS C:\Users\User\git-cafe-exercise>
 '''

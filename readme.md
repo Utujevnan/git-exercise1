@@ -602,3 +602,64 @@ To https://github.com/Utujevnan/git-cafe-exercise
 branch 'ft/menu-page' set up to track 'origin/ft/menu-page'.
 PS C:\Users\User\git-cafe-exercise> 
 '''
+### EXERCISE 2
+'''bash
+PS C:\Users\User\git-cafe-exercise> git init
+Reinitialized existing Git repository in C:/Users/User/git-cafPS C:\Users\User\git-cafe-exercise> git add index.html        
+PS C:\Users\User\git-cafe-exercise> git checkout -b ft/menu-pagege
+Switched to a new branch 'ft/menu-page'
+PS C:\Users\User\git-cafe-exercise> gut add menu.html
+cmdlet, function, script file, or operable program. Check     
+the spelling of the name, or if a path was included, verify   
+that the path is correct and try again.
+At line:1 char:1
++ gut add menu.html
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (gut:String) [  
+   ], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException        
+ 
+PS C:\Users\User\git-cafe-exercise> git commit -m "created a menu page to the feature branch"
+[ft/menu-page 8adb3df] created a menu page to the feature branch
+ 1 file changed, 81 insertions(+)
+ create mode 100644 menu.html
+PS C:\Users\User\git-cafe-exercise> git push
+fatal: The current branch ft/menu-page has no upstream branch.To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/menu-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.    
+
+PS C:\Users\User\git-cafe-exercise> git push --set-upstream orPS C:\Users\User\git-cafe-exercise> git checkout -b bugfix/change-index4-title
+>> 
+PS C:\Users\User\git-cafe-exercise> git add index-4.html      
+PS C:\Users\User\git-cafe-exercise> git commit -m "changed the main title"
+[bugfix/change-index4-title 31fe713] changed the main title   
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\User\git-cafe-exercise> git push
+fatal: The current branch bugfix/change-index4-title has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin bugfix/change-index4-title 
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.    
+
+PS C:\Users\User\git-cafe-exercise> git push --set-upstream origin bugfix/change-index4-title
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 304 bytes | 152.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0) 
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'bugfix/change-index4-title' on GitHub by visiting:
+remote:      https://github.com/Utujevnan/git-cafe-exercise/pull/new/bugfix/change-index4-title
+remote:
+To https://github.com/Utujevnan/git-cafe-exercise
+ * [new branch]      bugfix/change-index4-title -> bugfix/change-index4-title
+branch 'bugfix/change-index4-title' set up to track 'origin/bugfix/change-index4-title'.
+PS C:\Users\User\git-cafe-exercise> 
+'''
